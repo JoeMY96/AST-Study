@@ -21,10 +21,10 @@ var a = b.length;
 var foo = {
   bar: function () {},
 }
-*/
 
 
-!(function()
+
+!function()
 {
   a = b;
   function test() {
@@ -33,4 +33,20 @@ var foo = {
       return c;
   }
   e = test();
-})();
+}();
+
+
+
+var a = parseInt("12345",16),b = Number("123"),c = String(true),d = unescape("hello%2CAST%21");
+
+
+eval("a = 1");
+
+*/
+
+
+
+for (var e = "\u0270\u026D\u0274\u0274\u0277\u0234\u0249\u025B\u025C\u0229", a = "", s = 0; s < e.length; s++) {
+  var r = e.charCodeAt(s) - 520;
+  a += String.fromCharCode(r);
+}

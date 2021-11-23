@@ -21,13 +21,26 @@ var a = b.length;
 var foo = {
   bar: function () {},
 }
+
+
+
+!function()
+{
+  a = b;
+  function test() {
+      a = c;
+      c = d;
+      return c;
+  }
+  e = test();
+}();
+
+
+
+var a = parseInt("12345",16),b = Number("123"),c = String(true),d = unescape("hello%2CAST%21");
+
+
+eval("a = 1");
+
 */
-a = b;
-
-function test() {
-  a = c;
-  c = d;
-  return c;
-}
-
-e = test();
+var a = "hello,AST!";
