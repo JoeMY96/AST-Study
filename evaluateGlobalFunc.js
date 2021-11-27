@@ -4,7 +4,7 @@ const generate = require('@babel/generator').default;
 const types = require('@babel/types')
 const fs = require('fs');
 
-const sourceCode = fs.readFileSync('./source_code.js', {encoding: "utf-8"});
+const sourceCode = fs.readFileSync('./sourceCode.js', {encoding: "utf-8"});
 
 const ast = parser.parse(sourceCode);
 
